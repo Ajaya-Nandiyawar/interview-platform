@@ -1,0 +1,1419 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <meta name="description" content="Practice and master your interview skills with InterviewAI Pro, an AI-powered mock interview platform that provides real-time feedback, customizable scenarios, and performance analytics.">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="">
+
+      
+      <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+      <title>Interview AI</title>
+      <!-- SEO Description -->
+      <meta name="description" content="Practice and master your interview skills with InterviewAI Pro, an AI-powered mock interview platform that provides real-time feedback, customizable scenarios, and performance analytics.">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      
+      <!-- Header Scripts -->
+      <script id="header-scripts">
+        // This script tag will be replaced with actual scripts.head content
+        if (window.scripts && window.scripts.head) {
+          document.getElementById('header-scripts').outerHTML = window.scripts.head;
+        }
+      </script>
+
+      <!-- Preconnect -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+      <!-- Font stylesheet -->
+
+      <style>
+        :root {
+          color-scheme: light;
+        }
+
+        color-scheme: light;
+      </style>
+
+      <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+      // render the settings object
+      //console.log('settings', [object Object]);
+      document.addEventListener('DOMContentLoaded', function() {
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: {
+                  DEFAULT: '#4F46E5',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8', 
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  DEFAULT: '#10B981',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3', 
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  DEFAULT: '',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3', 
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Sora', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Inter', 'Inter', 'system-ui', 'sans-serif'],
+                body: ['Inter', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      });
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Dynamic Meta Tags -->
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <meta name="robots" content="">
+      <meta name="google-site-verification" content="">
+      <meta name="baidu-verification" content="">
+      <meta name="yandex-verification" content="">
+      <meta name="bing-verification" content="">
+      <meta property="og:title" content="">
+      <meta property="og:description" content="">
+      <meta property="og:image" content="">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="InterviewAI Pro">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="">
+      <meta name="twitter:description" content="">
+      <meta name="twitter:image" content="">
+    
+      
+      <!-- Font Links -->
+     
+      <link rel="icon" type="image/x-icon" href="">
+
+      <style>
+        h1, h2, h3, h4, h5, h6 {
+          font-family: Sora, Inter, system-ui, sans-serif;
+        }
+        body {
+          font-family: Inter, Inter, system-ui, sans-serif;
+        }
+      </style>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative h-full">
+        <div id="RolloutPageContent"><element id="4966ac0f-d3a2-4956-9c86-21d48d2f5733" data-section-id="4966ac0f-d3a2-4956-9c86-21d48d2f5733">
+
+
+<div id="root">
+  <header id="header" class="bg-white shadow-md">
+    <nav class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="#" class="text-xl font-bold text-indigo-600">InterviewAI</a>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex space-x-6">
+          <a href="#" class="text-gray-700 hover:text-indigo-600 transition duration-300">Home</a>
+          <a href="#features" class="text-gray-700 hover:text-indigo-600 transition duration-300">Features</a>
+          <a href="#benefits" class="text-gray-700 hover:text-indigo-600 transition duration-300">Benefits</a>
+          <a href="#how-it-works" class="text-gray-700 hover:text-indigo-600 transition duration-300">How It Works</a>
+          <a href="#testimonials" class="text-gray-700 hover:text-indigo-600 transition duration-300">Testimonials</a>
+          <a href="#pricing" class="text-gray-700 hover:text-indigo-600 transition duration-300">Pricing</a>
+          <a href="#faq" class="text-gray-700 hover:text-indigo-600 transition duration-300">FAQ</a>
+        </div>
+        
+        <!-- Mobile Navigation Button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="focus:outline-none" aria-label="Toggle menu" aria-expanded="false">
+            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Mobile Navigation Menu -->
+      <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2" aria-label="Mobile navigation">
+        <div class="flex flex-col space-y-3">
+          <a href="#" class="text-gray-700 hover:text-indigo-600 transition duration-300">Home</a>
+          <a href="#features" class="text-gray-700 hover:text-indigo-600 transition duration-300">Features</a>
+          <a href="#benefits" class="text-gray-700 hover:text-indigo-600 transition duration-300">Benefits</a>
+          <a href="#how-it-works" class="text-gray-700 hover:text-indigo-600 transition duration-300">How It Works</a>
+          <a href="#testimonials" class="text-gray-700 hover:text-indigo-600 transition duration-300">Testimonials</a>
+          <a href="#pricing" class="text-gray-700 hover:text-indigo-600 transition duration-300">Pricing</a>
+          <a href="#faq" class="text-gray-700 hover:text-indigo-600 transition duration-300">FAQ</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
+
+</element><element id="2321322c-8a09-4c98-a7d9-f9d00a65f464" data-section-id="2321322c-8a09-4c98-a7d9-f9d00a65f464">
+
+
+<div id="root">
+  <section id="hero" class="bg-indigo-600 py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+            Master Interviews with AI-Powered Practice
+          </h1>
+          <p class="text-xl text-indigo-100 mb-8">
+            Get real-time feedback, personalized coaching, and boost your confidence with our cutting-edge interview simulation platform.
+          </p>
+          <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <a href="#" class="bg-white text-indigo-600 font-medium py-3 px-6 rounded-lg text-center hover:bg-indigo-50 transition duration-300">
+              Start Free Interview
+            </a>
+            <a href="#features" class="bg-transparent border-2 border-white text-white font-medium py-3 px-6 rounded-lg text-center hover:bg-indigo-700 transition duration-300">
+              Learn More
+            </a>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <div class="relative">
+            <img 
+              src="https://placehold.co/600x500?text=AI Interview Simulation Platform"
+              alt="AI Interview Simulation Platform" 
+              class="rounded-lg shadow-xl"
+              width="600"
+              height="500"
+              onerror="this.onerror=null; this.src='https://placehold.co/' + this.width + 'x' + this.height"
+            >
+            <div class="absolute -bottom-5 -right-5 bg-white p-4 rounded-lg shadow-lg md:max-w-xs hidden md:block">
+              <div class="flex items-center space-x-2">
+                <div class="h-3 w-3 bg-green-500 rounded-full"></div>
+                <p class="text-gray-800 font-medium">97% of users land their dream job</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</element><element id="804b5d87-f8c6-41e6-970c-06e5b4d16184" data-section-id="804b5d87-f8c6-41e6-970c-06e5b4d16184">
+
+
+<div id="root">
+  <section id="features" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Powerful Features to Ace Your Interviews</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our AI-powered platform provides everything you need to prepare and excel in your next interview.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+          <div class="bg-indigo-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-indigo-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+              <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Real-Time AI Feedback</h3>
+          <p class="text-gray-600 mb-4">Get instant analysis of your responses, body language, and speech patterns with actionable suggestions for improvement.</p>
+          <ul class="space-y-2 text-gray-600">
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              Speech clarity and confidence analysis
+            </li>
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              Answer structure recommendations
+            </li>
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              Emotional intelligence insights
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+          <div class="bg-indigo-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-indigo-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Customizable Scenarios</h3>
+          <p class="text-gray-600 mb-4">Practice with industry-specific interviews tailored to your experience level and target role.</p>
+          <ul class="space-y-2 text-gray-600">
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              50+ industry templates
+            </li>
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              Behavioral and technical questions
+            </li>
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              Difficulty level adjustment
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+          <div class="bg-indigo-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-indigo-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
+              <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Performance Analytics</h3>
+          <p class="text-gray-600 mb-4">Track your progress over time with comprehensive metrics and visualizations to identify improvement areas.</p>
+          <ul class="space-y-2 text-gray-600">
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              Detailed performance scores
+            </li>
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              Progress tracking over time
+            </li>
+            <li class="flex items-center">
+              <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+              Personalized improvement plan
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Feature Highlight -->
+      <div class="mt-16 bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="flex flex-col md:flex-row">
+          <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">AI-Powered Interview Coach</h3>
+            <p class="text-gray-600 mb-6">Our advanced AI interviewer adapts to your responses in real-time, providing a realistic interview experience that helps you build confidence and mastery.</p>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg class="w-5 h-5 text-indigo-600 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                </div>
+                <p class="ml-3 text-gray-600">Natural language processing for lifelike conversations</p>
+              </div>
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg class="w-5 h-5 text-indigo-600 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                </div>
+                <p class="ml-3 text-gray-600">Voice and video analysis for comprehensive feedback</p>
+              </div>
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg class="w-5 h-5 text-indigo-600 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                </div>
+                <p class="ml-3 text-gray-600">Follow-up questions based on your answers</p>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <img 
+              src="https://placehold.co/600x400?text=AI Interview Coach in action"
+              alt="AI Interview Coach in action" 
+              class="w-full h-full object-cover"
+              width="600"
+              height="400"
+              onerror="this.onerror=null; this.src='https://placehold.co/' + this.width + 'x' + this.height"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</element><element id="c51acb9b-d261-48d3-abe1-7370eada6a36" data-section-id="c51acb9b-d261-48d3-abe1-7370eada6a36">
+
+
+<div id="root">
+  <section id="benefits" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our AI Interview Platform?</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Transform your interview preparation with advanced AI technology that delivers real results.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Benefit 1 -->
+        <div class="relative bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-xl p-8 hover:shadow-lg transition duration-300">
+          <div class="absolute top-0 right-0 -mt-4 -mr-4 bg-indigo-600 rounded-full w-12 h-12 flex items-center justify-center text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Accelerated Learning</h3>
+          <p class="text-gray-700 mb-4">Practice makes perfect. Our AI simulations let you participate in multiple interviews daily, rapidly building your skills and confidence.</p>
+          <ul class="space-y-2">
+            <li class="flex items-center text-gray-700">
+              <svg class="w-5 h-5 text-indigo-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              5x faster skill improvement
+            </li>
+            <li class="flex items-center text-gray-700">
+              <svg class="w-5 h-5 text-indigo-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Unlimited practice sessions
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Benefit 2 -->
+        <div class="relative bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-xl p-8 hover:shadow-lg transition duration-300">
+          <div class="absolute top-0 right-0 -mt-4 -mr-4 bg-indigo-600 rounded-full w-12 h-12 flex items-center justify-center text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Personalized Feedback</h3>
+          <p class="text-gray-700 mb-4">Get actionable insights tailored to your unique communication style and industry needs, highlighting exactly where to improve.</p>
+          <ul class="space-y-2">
+            <li class="flex items-center text-gray-700">
+              <svg class="w-5 h-5 text-indigo-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Detailed strength/weakness analysis
+            </li>
+            <li class="flex items-center text-gray-700">
+              <svg class="w-5 h-5 text-indigo-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Industry-specific advice
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Benefit 3 -->
+        <div class="relative bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-xl p-8 hover:shadow-lg transition duration-300">
+          <div class="absolute top-0 right-0 -mt-4 -mr-4 bg-indigo-600 rounded-full w-12 h-12 flex items-center justify-center text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Stress-Free Environment</h3>
+          <p class="text-gray-700 mb-4">Practice in a private, judgment-free space where you can make mistakes and learn without the pressure of real interviews.</p>
+          <ul class="space-y-2">
+            <li class="flex items-center text-gray-700">
+              <svg class="w-5 h-5 text-indigo-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              87% reduction in interview anxiety
+            </li>
+            <li class="flex items-center text-gray-700">
+              <svg class="w-5 h-5 text-indigo-600 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Practice anytime, anywhere
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Results Showcase -->
+      <div class="mt-20">
+        <div class="bg-indigo-100 rounded-xl overflow-hidden">
+          <div class="flex flex-col lg:flex-row">
+            <div class="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">Proven Results That Speak for Themselves</h3>
+              
+              <div class="grid grid-cols-2 gap-6 mb-8">
+                <div class="bg-white rounded-lg p-6 text-center shadow-sm">
+                  <div class="text-3xl font-bold text-indigo-600 mb-2">93%</div>
+                  <p class="text-gray-700">Job offer success rate</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center shadow-sm">
+                  <div class="text-3xl font-bold text-indigo-600 mb-2">78%</div>
+                  <p class="text-gray-700">Confidence increase</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center shadow-sm">
+                  <div class="text-3xl font-bold text-indigo-600 mb-2">4.8/5</div>
+                  <p class="text-gray-700">User satisfaction</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center shadow-sm">
+                  <div class="text-3xl font-bold text-indigo-600 mb-2">30+</div>
+                  <p class="text-gray-700">Industries covered</p>
+                </div>
+              </div>
+              
+              <a href="#" class="inline-block bg-indigo-600 text-white font-medium py-3 px-6 rounded-lg hover:bg-indigo-700 transition duration-300 text-center">
+                Start Your Success Story
+              </a>
+            </div>
+            <div class="lg:w-1/2">
+              <img 
+                src="https://placehold.co/600x500?text=Interview Success Graph" 
+                alt="Interview success rate graph" 
+                class="w-full h-full object-cover"
+                width="600"
+                height="500"
+                onerror="this.onerror=null; this.src='https://placehold.co/' + this.width + 'x' + this.height"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</element><element id="e3c7ef36-f3f2-494e-8576-034a52a10909" data-section-id="e3c7ef36-f3f2-494e-8576-034a52a10909">
+
+
+<div id="root">
+  <section id="how-it-works" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How Our AI Interview Platform Works</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Get interview-ready in just three simple steps</p>
+      </div>
+      
+      <div class="flex flex-col md:flex-row justify-between items-center mb-20">
+        <div class="w-full md:w-2/5 mb-10 md:mb-0">
+          <img 
+            src="https://placehold.co/500x400?text=Select Interview Type"
+            alt="Person selecting an interview type on a device" 
+            class="rounded-lg shadow-lg mx-auto"
+            width="500"
+            height="400"
+            onerror="this.onerror=null; this.src='https://placehold.co/' + this.width + 'x' + this.height"
+          >
+        </div>
+        <div class="w-full md:w-1/2">
+          <div class="bg-white p-8 rounded-xl shadow-md">
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 text-indigo-600 font-bold text-xl mb-6">1</div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Choose Your Interview Type</h3>
+            <p class="text-gray-700 mb-6">Select from over 30 industry-specific interview templates or customize your own scenario based on your target role.</p>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="ml-3 text-gray-700">Technical interviews for engineers and developers</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="ml-3 text-gray-700">Behavioral interviews for management roles</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="ml-3 text-gray-700">Case interviews for consulting positions</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex flex-col md:flex-row justify-between items-center mb-20">
+        <div class="w-full md:w-1/2 mb-10 md:mb-0 md:order-1">
+          <img 
+            src="https://placehold.co/500x400?text=AI Interview Session"
+            alt="Person having a video interview with AI" 
+            class="rounded-lg shadow-lg mx-auto"
+            width="500"
+            height="400"
+            onerror="this.onerror=null; this.src='https://placehold.co/' + this.width + 'x' + this.height"
+          >
+        </div>
+        <div class="w-full md:w-2/5 md:order-0">
+          <div class="bg-white p-8 rounded-xl shadow-md">
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 text-indigo-600 font-bold text-xl mb-6">2</div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Complete Your AI Interview</h3>
+            <p class="text-gray-700 mb-6">Participate in a realistic interview with our AI interviewer that adapts to your responses just like a human would.</p>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="ml-3 text-gray-700">Answer questions verbally or in writing</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="ml-3 text-gray-700">Video and audio recordings for comprehensive feedback</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="ml-3 text-gray-700">Dynamic follow-up questions based on your answers</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="w-full md:w-2/5 mb-10 md:mb-0">
+          <img 
+            src="https://placehold.co/500x400?text=Performance Analysis"
+            alt="Dashboard showing interview performance analytics" 
+            class="rounded-lg shadow-lg mx-auto"
+            width="500"
+            height="400"
+            onerror="this.onerror=null; this.src='https://placehold.co/' + this.width + 'x' + this.height"
+          >
+        </div>
+        <div class="w-full md:w-1/2">
+          <div class="bg-white p-8 rounded-xl shadow-md">
+            <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 text-indigo-600 font-bold text-xl mb-6">3</div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Review Your Performance</h3>
+            <p class="text-gray-700 mb-6">Get detailed feedback and actionable insights to improve your interview skills through our comprehensive analysis.</p>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="ml-3 text-gray-700">Detailed scoring on key interview competencies</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="ml-3 text-gray-700">Analysis of speech patterns, filler words, and pacing</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="ml-3 text-gray-700">Personalized improvement suggestions</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-16 text-center">
+        <a href="#" class="inline-block bg-indigo-600 text-white font-medium py-4 px-8 rounded-lg hover:bg-indigo-700 transition duration-300 text-lg">
+          Try Your First AI Interview Now
+        </a>
+        <p class="text-gray-600 mt-4">No registration required. Get started in seconds.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+</element><element id="fc0bad5f-d25a-4161-83fc-63e4bf2561aa" data-section-id="fc0bad5f-d25a-4161-83fc-63e4bf2561aa">
+
+
+<div id="root">
+  <section id="testimonials" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Success Stories from Our Users</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          See how our AI interview platform has helped job seekers land their dream roles.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition duration-300">
+          <div class="flex items-center mb-6">
+            <div class="text-yellow-400 flex">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+            </div>
+          </div>
+          <blockquote class="text-gray-700 mb-6">
+            "After practicing with this AI platform for just two weeks, I went from nervous and unprepared to confident and articulate. I aced my interview at Google and got the job!"
+          </blockquote>
+          <div class="flex items-center">
+            <img 
+              src="https://placehold.co/60x60?text=MJ"
+              alt="Michael Johnson"
+              class="w-12 h-12 rounded-full object-cover mr-4"
+              width="60"
+              height="60"
+              onerror="this.onerror=null; this.src='https://placehold.co/' + this.width + 'x' + this.height"
+            >
+            <div>
+              <p class="font-bold text-gray-900">Michael Johnson</p>
+              <p class="text-gray-600 text-sm">Software Engineer, Google</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition duration-300">
+          <div class="flex items-center mb-6">
+            <div class="text-yellow-400 flex">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+            </div>
+          </div>
+          <blockquote class="text-gray-700 mb-6">
+            "The AI feedback was incredibly detailed and helpful. I could identify my weaknesses and practice until I overcame them. Three interviews later, I received offers from all companies!"
+          </blockquote>
+          <div class="flex items-center">
+            <img 
+              src="https://placehold.co/60x60?text=SR"
+              alt="Sarah Rodriguez" 
+              class="w-12 h-12 rounded-full object-cover mr-4"
+              width="60"
+              height="60"
+              onerror="this.onerror=null; this.src='https://placehold.co/' + this.width + 'x' + this.height"
+            >
+            <div>
+              <p class="font-bold text-gray-900">Sarah Rodriguez</p>
+              <p class="text-gray-600 text-sm">Marketing Director, Netflix</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition duration-300">
+          <div class="flex items-center mb-6">
+            <div class="text-yellow-400 flex">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+            </div>
+          </div>
+          <blockquote class="text-gray-700 mb-6">
+            "As a career changer, I had no idea how to prepare for technical interviews. This platform helped me understand the interview structure and practice with real-world scenarios."
+          </blockquote>
+          <div class="flex items-center">
+            <img 
+              src="https://placehold.co/60x60?text=DP"
+              alt="David Patel" 
+              class="w-12 h-12 rounded-full object-cover mr-4"
+              width="60"
+              height="60"
+              onerror="this.onerror=null; this.src='https://placehold.co/' + this.width + 'x' + this.height"
+            >
+            <div>
+              <p class="font-bold text-gray-900">David Patel</p>
+              <p class="text-gray-600 text-sm">Data Scientist, Amazon</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Success Metrics -->
+      <div class="mt-20 bg-indigo-600 rounded-xl py-10 px-8 md:px-16">
+        <div class="text-center mb-12">
+          <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Our Users' Success by the Numbers</h3>
+          <p class="text-indigo-100 max-w-2xl mx-auto">
+            Thousands of job seekers have transformed their interview performance with our platform.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="text-4xl md:text-5xl font-bold text-white mb-2">93%</div>
+            <p class="text-indigo-100">Job offer success rate</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl md:text-5xl font-bold text-white mb-2">10K+</div>
+            <p class="text-indigo-100">Active users</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl md:text-5xl font-bold text-white mb-2">74%</div>
+            <p class="text-indigo-100">Reduced interview anxiety</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl md:text-5xl font-bold text-white mb-2">65%</div>
+            <p class="text-indigo-100">Higher salary offers</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Case Study -->
+      <div class="mt-20">
+        <div class="bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/2 p-8 md:p-12">
+              <div class="inline-block px-4 py-1 bg-indigo-100 text-indigo-600 rounded-full mb-6 font-medium">
+                Case Study
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">From Rejected to Recruited</h3>
+              <p class="text-gray-700 mb-6">
+                James was rejected from 12 interviews before using our platform. After just one month of practice, he landed his dream job at Microsoft with a six-figure salary.
+              </p>
+              <div class="mb-6">
+                <h4 class="font-bold text-gray-900 mb-3">Key improvements:</h4>
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-green-500 mt-1 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-gray-700">Eliminated filler words by 86%</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-green-500 mt-1 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-gray-700">Improved answer structure and clarity</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="w-5 h-5 text-green-500 mt-1 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-gray-700">Developed compelling personal stories</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="flex items-center">
+                <img 
+                  src="https://placehold.co/60x60?text=JW"
+                  alt="James Wilson" 
+                  class="w-12 h-12 rounded-full object-cover mr-4"
+                  width="60"
+                  height="60"
+                  onerror="this.onerror=null; this.src='https://placehold.co/' + this.width + 'x' + this.height"
+                >
+                <div>
+                  <p class="font-bold text-gray-900">James Wilson</p>
+                  <p class="text-gray-600 text-sm">Product Manager, Microsoft</p>
+                </div>
+              </div>
+            </div>
+            <div class="md:w-1/2 bg-gray-100">
+              <img 
+                src="https://placehold.co/600x500?text=Before and After Interview Performance"
+                alt="Before and after interview performance comparison" 
+                class="w-full h-full object-cover"
+                width="600"
+                height="500"
+                onerror="this.onerror=null; this.src='https://placehold.co/' + this.width + 'x' + this.height"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</element><element id="ed19255c-a0da-4da6-b185-d7b346fab6a2" data-section-id="ed19255c-a0da-4da6-b185-d7b346fab6a2">
+
+
+<div id="root">
+  <section id="pricing" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Choose the plan that fits your interview preparation needs</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Free Plan -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 overflow-hidden">
+          <div class="p-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Free Trial</h3>
+            <div class="flex items-baseline mb-6">
+              <span class="text-4xl font-extrabold text-gray-900">$0</span>
+              <span class="text-gray-600 ml-1">/month</span>
+            </div>
+            <p class="text-gray-600 mb-6">Perfect for beginners who want to test the platform.</p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-700">3 AI mock interviews</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-700">Basic performance analytics</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-700">5 interview templates</span>
+              </li>
+              <li class="flex items-start text-gray-400">
+                <svg class="w-5 h-5 text-gray-300 mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Advanced feedback analysis</span>
+              </li>
+              <li class="flex items-start text-gray-400">
+                <svg class="w-5 h-5 text-gray-300 mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Industry-specific questions</span>
+              </li>
+            </ul>
+            <a href="#" class="block w-full bg-gray-100 text-gray-800 text-center font-medium py-3 px-6 rounded-lg hover:bg-gray-200 transition duration-300">
+              Start Free Trial
+            </a>
+          </div>
+        </div>
+        
+        <!-- Standard Plan -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 overflow-hidden relative transform scale-105 border-2 border-indigo-600">
+          <div class="absolute top-0 inset-x-0 bg-indigo-600 text-white text-center py-2 font-medium">
+            Most Popular
+          </div>
+          <div class="p-8 pt-14">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Standard</h3>
+            <div class="flex items-baseline mb-6">
+              <span class="text-4xl font-extrabold text-gray-900">$19</span>
+              <span class="text-gray-600 ml-1">/month</span>
+            </div>
+            <p class="text-gray-600 mb-6">Ideal for active job seekers preparing for interviews.</p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-700">Unlimited AI mock interviews</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-700">Advanced performance analytics</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-700">20+ interview templates</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-700">Detailed feedback analysis</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-700">Industry-specific questions</span>
+              </li>
+            </ul>
+            <a href="#" class="block w-full bg-indigo-600 text-white text-center font-medium py-3 px-6 rounded-lg hover:bg-indigo-700 transition duration-300">
+              Start Now
+            </a>
+          </div>
+        </div>
+        
+        <!-- Premium Plan -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 overflow-hidden">
+          <div class="p-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Premium</h3>
+            <div class="flex items-baseline mb-6">
+              <span class="text-4xl font-extrabold text-gray-900">$49</span>
+              <span class="text-gray-600 ml-1">/month</span>
+            </div>
+            <p class="text-gray-600 mb-6">Full-featured coaching for serious interview preparation.</p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-700">Everything in Standard</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-700">2 one-on-one coaching sessions</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-700">Resume and LinkedIn review</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-700">Custom interview scenarios</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-500 mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-gray-700">Priority support</span>
+              </li>
+            </ul>
+            <a href="#" class="block w-full bg-gray-800 text-white text-center font-medium py-3 px-6 rounded-lg hover:bg-gray-900 transition duration-300">
+              Upgrade to Premium
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- FAQ -->
+      <div class="mt-20 max-w-4xl mx-auto">
+        <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h3>
+        
+        <div class="space-y-6">
+          <div class="bg-white rounded-lg shadow-sm p-6">
+            <h4 class="font-bold text-lg text-gray-900 mb-2">Can I cancel my subscription anytime?</h4>
+            <p class="text-gray-700">Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees.</p>
+          </div>
+          
+          <div class="bg-white rounded-lg shadow-sm p-6">
+            <h4 class="font-bold text-lg text-gray-900 mb-2">Do you offer a satisfaction guarantee?</h4>
+            <p class="text-gray-700">Absolutely! If you're not satisfied with our platform within the first 14 days, we'll refund your payment in full.</p>
+          </div>
+          
+          <div class="bg-white rounded-lg shadow-sm p-6">
+            <h4 class="font-bold text-lg text-gray-900 mb-2">Is my data secure?</h4>
+            <p class="text-gray-700">Your privacy is our priority. All interview recordings and data are encrypted and never shared with third parties.</p>
+          </div>
+          
+          <div class="bg-white rounded-lg shadow-sm p-6">
+            <h4 class="font-bold text-lg text-gray-900 mb-2">How do the coaching sessions work?</h4>
+            <p class="text-gray-700">Premium plan members can schedule one-on-one virtual coaching sessions with experienced interview coaches through our platform.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-16 text-center">
+        <a href="#" class="inline-block bg-indigo-600 text-white font-medium py-4 px-8 rounded-lg hover:bg-indigo-700 transition duration-300 text-lg">
+          Start Your Free Trial Today
+        </a>
+        <p class="text-gray-600 mt-4">No credit card required. Cancel anytime.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+</element><element id="63c0ad70-b35b-446f-bd87-18494c53b367" data-section-id="63c0ad70-b35b-446f-bd87-18494c53b367">
+
+
+<div id="root">
+  <section id="faq" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Everything you need to know about our AI interview platform</p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto">
+        <!-- FAQ Item 1 -->
+        <div class="mb-6 border-b border-gray-200 pb-6">
+          <button class="flex justify-between items-center w-full text-left focus:outline-none" id="faq-button-1" aria-expanded="false" aria-controls="faq-answer-1">
+            <h3 class="text-xl font-semibold text-gray-900">How does the AI interview simulation work?</h3>
+            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="mt-3 hidden" id="faq-answer-1">
+            <p class="text-gray-700">
+              Our AI uses natural language processing to conduct realistic interview conversations. It asks industry-specific questions, analyzes your responses in real-time, and provides immediate feedback on your answers, communication style, and presentation skills.
+            </p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 2 -->
+        <div class="mb-6 border-b border-gray-200 pb-6">
+          <button class="flex justify-between items-center w-full text-left focus:outline-none" id="faq-button-2" aria-expanded="false" aria-controls="faq-answer-2">
+            <h3 class="text-xl font-semibold text-gray-900">What types of interviews can I practice?</h3>
+            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="mt-3 hidden" id="faq-answer-2">
+            <p class="text-gray-700">
+              We offer a wide range of interview types including behavioral, technical, case interviews, and industry-specific scenarios. You can choose templates for roles in tech, finance, healthcare, marketing, sales, and many more fields.
+            </p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 3 -->
+        <div class="mb-6 border-b border-gray-200 pb-6">
+          <button class="flex justify-between items-center w-full text-left focus:outline-none" id="faq-button-3" aria-expanded="false" aria-controls="faq-answer-3">
+            <h3 class="text-xl font-semibold text-gray-900">How accurate is the AI feedback?</h3>
+            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="mt-3 hidden" id="faq-answer-3">
+            <p class="text-gray-700">
+              Our AI has been trained on thousands of real interviews and feedback from industry professionals. It provides accurate insights on your answer quality, speech patterns, and non-verbal cues. Our 93% user success rate demonstrates the effectiveness of our feedback system.
+            </p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 4 -->
+        <div class="mb-6 border-b border-gray-200 pb-6">
+          <button class="flex justify-between items-center w-full text-left focus:outline-none" id="faq-button-4" aria-expanded="false" aria-controls="faq-answer-4">
+            <h3 class="text-xl font-semibold text-gray-900">Do I need special equipment to use the platform?</h3>
+            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="mt-3 hidden" id="faq-answer-4">
+            <p class="text-gray-700">
+              All you need is a computer or mobile device with a microphone and webcam (for video interviews). Our platform works on all modern browsers without requiring any downloads or installations.
+            </p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 5 -->
+        <div class="mb-6 border-b border-gray-200 pb-6">
+          <button class="flex justify-between items-center w-full text-left focus:outline-none" id="faq-button-5" aria-expanded="false" aria-controls="faq-answer-5">
+            <h3 class="text-xl font-semibold text-gray-900">How long does each practice interview take?</h3>
+            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="mt-3 hidden" id="faq-answer-5">
+            <p class="text-gray-700">
+              Most practice interviews last between 15-30 minutes, depending on the template you choose. After each session, you'll receive an additional 5-10 minutes of detailed feedback and analysis to review.
+            </p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 6 -->
+        <div class="mb-6 border-b border-gray-200 pb-6">
+          <button class="flex justify-between items-center w-full text-left focus:outline-none" id="faq-button-6" aria-expanded="false" aria-controls="faq-answer-6">
+            <h3 class="text-xl font-semibold text-gray-900">Is my interview data private and secure?</h3>
+            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="mt-3 hidden" id="faq-answer-6">
+            <p class="text-gray-700">
+              Yes, we take privacy seriously. All your interview recordings and data are encrypted and stored securely. We never share your information with third parties, and you can delete your data at any time.
+            </p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 7 -->
+        <div class="mb-6 border-b border-gray-200 pb-6">
+          <button class="flex justify-between items-center w-full text-left focus:outline-none" id="faq-button-7" aria-expanded="false" aria-controls="faq-answer-7">
+            <h3 class="text-xl font-semibold text-gray-900">Can I cancel my subscription anytime?</h3>
+            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="mt-3 hidden" id="faq-answer-7">
+            <p class="text-gray-700">
+              Absolutely! There are no long-term contracts. You can cancel your subscription at any time directly from your account settings, no questions asked.
+            </p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 8 -->
+        <div class="mb-6">
+          <button class="flex justify-between items-center w-full text-left focus:outline-none" id="faq-button-8" aria-expanded="false" aria-controls="faq-answer-8">
+            <h3 class="text-xl font-semibold text-gray-900">Do you offer support if I have questions?</h3>
+            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="mt-3 hidden" id="faq-answer-8">
+            <p class="text-gray-700">
+              Yes, our customer support team is available via live chat and email. Premium members also get priority support and access to one-on-one coaching sessions with interview experts.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-12 text-center">
+        <p class="text-gray-700 mb-6">Still have questions? We're here to help!</p>
+        <a href="#" class="inline-block bg-indigo-600 text-white font-medium py-3 px-8 rounded-lg hover:bg-indigo-700 transition duration-300">
+          Contact Support
+        </a>
+      </div>
+    </div>
+    
+    <script>
+      // FAQ Toggle Functionality
+      document.querySelectorAll('[id^="faq-button-"]').forEach(button => {
+        button.addEventListener('click', () => {
+          const answerId = button.getAttribute('aria-controls');
+          const answerElement = document.getElementById(answerId);
+          
+          const isExpanded = button.getAttribute('aria-expanded') === 'true';
+          button.setAttribute('aria-expanded', !isExpanded);
+          
+          if (isExpanded) {
+            answerElement.classList.add('hidden');
+          } else {
+            answerElement.classList.remove('hidden');
+          }
+          
+          // Rotate the icon
+          const icon = button.querySelector('svg');
+          if (isExpanded) {
+            icon.style.transform = 'rotate(0deg)';
+          } else {
+            icon.style.transform = 'rotate(180deg)';
+          }
+        });
+      });
+    </script>
+  </section>
+</div>
+
+</element><element id="9df16f9d-88fa-429c-997a-e603539215d2" data-section-id="9df16f9d-88fa-429c-997a-e603539215d2">
+
+
+<div id="root">
+  <section id="cta" class="py-20 bg-indigo-600">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Ace Your Next Interview?</h2>
+        <p class="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
+          Join thousands of successful job seekers who have transformed their interview skills with our AI-powered platform.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
+          <a href="#" class="bg-white text-indigo-600 hover:bg-indigo-50 font-bold py-4 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105">
+            Start Free Interview
+          </a>
+          <a href="#pricing" class="bg-transparent border-2 border-white text-white hover:bg-indigo-700 font-bold py-4 px-8 rounded-lg text-lg transition duration-300">
+            View Pricing Plans
+          </a>
+        </div>
+        
+        <div class="bg-indigo-700 rounded-xl p-8 md:p-12 shadow-lg">
+          <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-2/3 mb-6 md:mb-0 md:pr-8">
+              <h3 class="text-2xl font-bold text-white mb-4">Join Our Community</h3>
+              <p class="text-indigo-100 mb-6">
+                Subscribe to our newsletter for interview tips, industry insights, and exclusive offers.
+              </p>
+              <form class="flex flex-col sm:flex-row w-full max-w-lg mx-auto md:mx-0">
+                <input 
+                  type="email" 
+                  placeholder="Your email address" 
+                  class="flex-grow px-4 py-3 mb-2 sm:mb-0 sm:mr-2 rounded-lg focus:outline-none text-gray-900"
+                  required
+                >
+                <button 
+                  type="submit" 
+                  class="bg-indigo-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-800 transition duration-300"
+                >
+                  Subscribe
+                </button>
+              </form>
+            </div>
+            <div class="md:w-1/3 flex justify-center">
+              <div class="flex space-x-3">
+                <div class="flex flex-col items-center">
+                  <div class="text-4xl font-bold text-white">10k+</div>
+                  <div class="text-indigo-200 text-sm">Users</div>
+                </div>
+                <div class="border-r border-indigo-500 mx-2"></div>
+                <div class="flex flex-col items-center">
+                  <div class="text-4xl font-bold text-white">93%</div>
+                  <div class="text-indigo-200 text-sm">Success Rate</div>
+                </div>
+                <div class="border-r border-indigo-500 mx-2"></div>
+                <div class="flex flex-col items-center">
+                  <div class="text-4xl font-bold text-white">4.9</div>
+                  <div class="text-indigo-200 text-sm">Rating</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-12 text-indigo-100">
+          <p>No credit card required. Start practicing today.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</element></div>
+      </main>
+
+      <!-- {bodyScripts} -->
+   </body>
+</html>
